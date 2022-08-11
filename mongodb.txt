@@ -1,0 +1,15 @@
+//use admin 
+use admin
+
+
+//create user 
+db.createUser(
+  {
+    user: "qwerty2",
+    pwd:  "test123",   // or cleartext password
+    roles: [ { role: "dbOwner", db: "softline" }]
+  }
+)
+
+//url
+mongodb://qwerty2:test123@43.205.7.4:27017/softline?authSource=admin
