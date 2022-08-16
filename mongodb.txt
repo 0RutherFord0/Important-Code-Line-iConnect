@@ -2,7 +2,7 @@
 
 services:
   mongodb:
-    image: mongo
+    image: mongo:5.0
     ports:
       - 27017:27017
     environment:
@@ -10,7 +10,10 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: softline5599
     restart: always
     volumes:
-      - ~/apps/mongo:/data/db
+      - mongo_db:/data/db
+volumes:
+  mongo_db: {}
+
 
 //mongo compass url
 mongodb://softline:softline5599@IPAddress:27017 
