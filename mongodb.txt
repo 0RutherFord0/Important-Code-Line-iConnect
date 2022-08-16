@@ -1,3 +1,21 @@
+//docker-compose.yml
+
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: softline
+      MONGO_INITDB_ROOT_PASSWORD: softline5599
+    restart: always
+    volumes:
+      - ~/apps/mongo:/data/db
+
+//mongo compass url
+mongodb://softline:softline5599@IPAddress:27017 
+
+
 //use admin 
 use admin
 
